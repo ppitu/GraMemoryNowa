@@ -23,7 +23,6 @@ namespace Gra_Memoy___DN
         public void Odkryj()
         {
             //BackgroundImage = Obrazek;
-            Text = Obrazek;
             Enabled = false;
         }
 
