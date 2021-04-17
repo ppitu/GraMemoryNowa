@@ -34,7 +34,7 @@ namespace Gra_Memoy___DN
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblStartInfo = new System.Windows.Forms.Label();
             this.panelKarty = new System.Windows.Forms.Panel();
             this.timerZakrywacz = new System.Windows.Forms.Timer(this.components);
             this.timerCzasGry = new System.Windows.Forms.Timer(this.components);
@@ -81,15 +81,15 @@ namespace Gra_Memoy___DN
             this.label4.TabIndex = 2;
             this.label4.Text = "0";
             // 
-            // label5
+            // lblStartInfo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(420, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(185, 23);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Początek gry za 5.";
+            this.lblStartInfo.AutoSize = true;
+            this.lblStartInfo.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblStartInfo.Location = new System.Drawing.Point(420, 9);
+            this.lblStartInfo.Name = "lblStartInfo";
+            this.lblStartInfo.Size = new System.Drawing.Size(185, 23);
+            this.lblStartInfo.TabIndex = 4;
+            this.lblStartInfo.Text = "Początek gry za 5.";
             // 
             // panelKarty
             // 
@@ -109,6 +109,7 @@ namespace Gra_Memoy___DN
             // timerCzasPodgladu
             // 
             this.timerCzasPodgladu.Interval = 1000;
+            this.timerCzasPodgladu.Tick += new System.EventHandler(this.timerCzasPodgladu_Tick);
             // 
             // Form1
             // 
@@ -117,7 +118,7 @@ namespace Gra_Memoy___DN
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(617, 224);
             this.Controls.Add(this.panelKarty);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblStartInfo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -137,7 +138,7 @@ namespace Gra_Memoy___DN
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblStartInfo;
         private System.Windows.Forms.Panel panelKarty;
         private System.Windows.Forms.Timer timerZakrywacz;
         private System.Windows.Forms.Timer timerCzasGry;

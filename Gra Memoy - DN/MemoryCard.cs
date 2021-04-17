@@ -4,32 +4,33 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Gra_Memoy___DN
 {
-    class MemoryCard : System.Windows.Forms.Label
+    class MemoryCard : Label
     {
         public Guid Id;
-        public string Tyl;
-        public string Obrazek;
+        public Image Tyl;
+        public Image Obrazek;
 
         public MemoryCard(Guid id, string tyl, string obrazek)
         {
             Id = id;
-            Tyl = tyl;
-            Obrazek = obrazek;
+            Tyl = Image.FromFile(tyl);
+            Obrazek = Image.FromFile(obrazek);
+            BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         public void Odkryj()
         {
-            //BackgroundImage = Obrazek;
+            BackgroundImage = Obrazek;
             Enabled = false;
         }
 
         public void Zakryj()
         {
-            //BackgroundImage = Tyl;
-            Text = Tyl;
+            BackgroundImage = Tyl;
             Enabled = true;
         }
     }
