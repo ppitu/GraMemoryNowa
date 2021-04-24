@@ -31,9 +31,9 @@ namespace Gra_Memoy___DN
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCzasGry = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblPunkty = new System.Windows.Forms.Label();
             this.lblStartInfo = new System.Windows.Forms.Label();
             this.panelKarty = new System.Windows.Forms.Panel();
             this.timerZakrywacz = new System.Windows.Forms.Timer(this.components);
@@ -51,15 +51,15 @@ namespace Gra_Memoy___DN
             this.label1.TabIndex = 0;
             this.label1.Text = "Czas";
             // 
-            // label2
+            // lblCzasGry
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(23, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "60";
+            this.lblCzasGry.AutoSize = true;
+            this.lblCzasGry.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblCzasGry.Location = new System.Drawing.Point(23, 32);
+            this.lblCzasGry.Name = "lblCzasGry";
+            this.lblCzasGry.Size = new System.Drawing.Size(34, 23);
+            this.lblCzasGry.TabIndex = 1;
+            this.lblCzasGry.Text = "60";
             // 
             // label3
             // 
@@ -71,15 +71,15 @@ namespace Gra_Memoy___DN
             this.label3.TabIndex = 3;
             this.label3.Text = "Punkty:";
             // 
-            // label4
+            // lblPunkty
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(254, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 23);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "0";
+            this.lblPunkty.AutoSize = true;
+            this.lblPunkty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblPunkty.Location = new System.Drawing.Point(254, 32);
+            this.lblPunkty.Name = "lblPunkty";
+            this.lblPunkty.Size = new System.Drawing.Size(22, 23);
+            this.lblPunkty.TabIndex = 2;
+            this.lblPunkty.Text = "0";
             // 
             // lblStartInfo
             // 
@@ -101,10 +101,12 @@ namespace Gra_Memoy___DN
             // timerZakrywacz
             // 
             this.timerZakrywacz.Interval = 1000;
+            this.timerZakrywacz.Tick += new System.EventHandler(this.timerZakrywacz_Tick);
             // 
             // timerCzasGry
             // 
             this.timerCzasGry.Interval = 1000;
+            this.timerCzasGry.Tick += new System.EventHandler(this.timerCzasGry_Tick);
             // 
             // timerCzasPodgladu
             // 
@@ -120,8 +122,8 @@ namespace Gra_Memoy___DN
             this.Controls.Add(this.panelKarty);
             this.Controls.Add(this.lblStartInfo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblPunkty);
+            this.Controls.Add(this.lblCzasGry);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
@@ -135,9 +137,9 @@ namespace Gra_Memoy___DN
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCzasGry;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblPunkty;
         private System.Windows.Forms.Label lblStartInfo;
         private System.Windows.Forms.Panel panelKarty;
         private System.Windows.Forms.Timer timerZakrywacz;

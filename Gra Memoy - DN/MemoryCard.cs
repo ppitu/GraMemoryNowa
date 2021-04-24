@@ -33,5 +33,8 @@ namespace Gra_Memoy___DN
             BackgroundImage = Tyl;
             Enabled = true;
         }
+
+
+
     }
 }
