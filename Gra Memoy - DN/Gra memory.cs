@@ -29,7 +29,7 @@ namespace Gra_Memoy___DN
         {
             panelKarty.Width = _settings.Bok * _settings.Wiersze;
             panelKarty.Height = _settings.Bok * _settings.Kolumny;
-
+            //Test
             Width = panelKarty.Width + 40;
             Height = panelKarty.Height + 100;
         }
